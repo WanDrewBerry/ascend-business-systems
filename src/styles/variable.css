@@ -1,0 +1,25 @@
+
+:root {
+  /* Ascend Business Systems brand */
+  --brand-primary: #20252f;
+  --brand-secondary: #626b78;
+  --brand-accent: #b8945a;
+
+  /* Backgrounds */
+  --brand-background: #ffffff;
+  --brand-surface: #f7f8fa;
+
+  /* Text */
+  --brand-text: #20252f;
+  --brand-text-muted: #626b78;
+
+  /* Borders */
+  --brand-border: #e5e7eb;
+
+  /* Layout */
+  --container-width: 1280px;
+  --section-spacing: 6rem;
+
+  /* Corners */
+  --brand-radius: 12px;
+}

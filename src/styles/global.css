@@ -1,0 +1,97 @@
+
+:root {
+  /* Ascend Business Systems brand colors */
+  --brand-navy: #10264A;
+  --brand-blue: #038DCA;
+  --brand-blue-hover: #0276AA;
+  --brand-background: #FAF9F6;
+  --brand-surface: #FFFFFF;
+  --brand-muted: #626B78;
+  --brand-border: #E7E3DC;
+  --brand-light-blue: #EAF5FA;
+
+  /* Layout */
+  --container-width: 72rem;
+  --section-spacing: 6rem;
+
+  color: var(--brand-navy);
+  background: var(--brand-background);
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  color: var(--brand-navy);
+  background: var(--brand-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--brand-blue);
+  color: #FFFFFF;
+}
+
+.container {
+  width: min(
+    calc(100% - 3rem),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-spacing);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-spacing: 4rem;
+  }
+
+  .container {
+    width: min(calc(100% - 2rem), var(--container-width));
+  }
+}
