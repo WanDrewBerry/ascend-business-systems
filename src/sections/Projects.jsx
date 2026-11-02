@@ -1,6 +1,10 @@
 import { useState } from "react";
 import VideoModal from "../components/VideoModal";
 
+// Cloudflare R2 video storage
+const VIDEO_BASE_URL =
+  "https://pub-0499836e4a2a48949db92ad5f2bfbb8b.r2.dev";
+
 const projects = [
   {
     category: "CRM & Automation",
@@ -9,7 +13,7 @@ const projects = [
       "A real estate rental automation demo connecting lead capture, CRM pipelines, viewing appointments, rental applications, lease follow-ups, and payment workflows.",
     tools: "GoHighLevel · CRM · Workflow Automation",
     number: "01",
-    video: "/ImagesVideos/primenest.mp4",
+    video: `${VIDEO_BASE_URL}/primenest.mp4`,
   },
   {
     category: "E-commerce",
@@ -18,7 +22,7 @@ const projects = [
       "An independent e-commerce website featuring product browsing, a merchandise catalog, shopping cart, checkout, and order confirmation.",
     tools: "E-commerce · Web Development · Digital Solutions",
     number: "02",
-    video: "/ImagesVideos/ecommerce.mp4",
+    video: `${VIDEO_BASE_URL}/ecommerce.mp4`,
   },
   {
     category: "Workflow Automation",
@@ -27,7 +31,7 @@ const projects = [
       "A Zapier automation project connecting RSS feeds, scheduled workflows, content processing, and social media publishing.",
     tools: "Zapier · RSS · Social Media Automation",
     number: "03",
-    video: "/ImagesVideos/daily-feeds.mp4",
+    video: `${VIDEO_BASE_URL}/daily-feeds.mp4`,
   },
   {
     category: "AI & Automation",
@@ -36,7 +40,7 @@ const projects = [
       "An automated digest workflow that collects RSS updates, processes content using AI, compiles summaries, and delivers a scheduled email roundup.",
     tools: "Zapier · AI Automation · RSS · Email Automation",
     number: "04",
-    video: "/ImagesVideos/weekly-digest.mp4",
+    video: `${VIDEO_BASE_URL}/weekly-digest.mp4`,
   },
   {
     category: "AI & Content Automation",
@@ -45,7 +49,7 @@ const projects = [
       "An independent automation project exploring AI-assisted content preparation and social media workflows.",
     tools: "Zapier · AI · Content Automation",
     number: "05",
-    video: "/ImagesVideos/instagram-automation.mp4",
+    video: `${VIDEO_BASE_URL}/instagram-automation.mp4`,
   },
 ];
 
@@ -58,7 +62,6 @@ export default function Projects() {
       className="bg-[#FAF9F6] px-6 py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl">
-
         {/* Section Header */}
         <div className="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div className="max-w-2xl">
