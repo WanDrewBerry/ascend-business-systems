@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const navLinks = [
@@ -14,18 +13,31 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#FAF9F6]/95 px-5 pt-4 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between rounded-2xl border border-[#E7E3DC] bg-white/90 px-5 py-4">
-        {/* Brand */}
+
+        {/* Brand Logo and Text */}
         <a
           href="#home"
-          className="flex flex-col"
+          className="flex shrink-0 items-center gap-3"
           onClick={() => setMenuOpen(false)}
+          aria-label="Ascend Business Systems - Home"
         >
-          <span className="text-lg font-semibold tracking-[0.16em] text-[#10264A]">
-            ASCEND
-          </span>
-          <span className="text-[9px] tracking-[0.2em] text-[#626B78]">
-            BUSINESS SYSTEMS
-          </span>
+          {/* Logo */}
+          <img
+            src="/logo.png"
+            alt=""
+            className="h-11 w-11 shrink-0 object-contain"
+          />
+
+          {/* Brand Text */}
+          <div className="flex flex-col">
+            <span className="text-lg font-semibold tracking-[0.16em] text-[#10264A]">
+              ASCEND
+            </span>
+
+            <span className="text-[9px] tracking-[0.2em] text-[#626B78]">
+              BUSINESS SYSTEMS
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
